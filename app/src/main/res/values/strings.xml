@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ToDo List</string>
+    <string name="app_title">Todo Lists</string>
+    <string name="details_title">Todo Details</string>
+    <string name="message_no_item">No todo list</string>
+    <string name="message_progress">Wait a sec…</string>
+    <string name="text_completed">Completed</string>
+    <string name="text_not_completed">Not Completed</string>
+    <string name="text_title_id">Id</string>
+    <string name="text_title_user_id">User Id</string>
+    <string name="text_title_title">Title</string>
+    <string name="text_title_status">Status</string>
+</resources>

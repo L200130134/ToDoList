@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".presentation.detailpage.view.DetailPageActivity">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingStart="14dp"
+        android:paddingEnd="20dp"
+        android:background="@color/primary"
+        android:orientation="vertical"
+        android:minHeight="58dp"
+        android:elevation="3dp"
+        android:layout_marginBottom="3dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icon_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/text_title"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bg_icon_big_dark"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="6dp"
+            android:src="@drawable/ic_back"
+            android:tint="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_title"
+            android:layout_toStartOf="@id/image_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/icon_back"
+            android:fontFamily="@font/productsans_bold"
+            android:gravity="center_vertical"
+            android:text="@string/details_title"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_user"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_circle"
+            android:src="@drawable/ic_user"
+            android:tint="@color/white"
+            android:padding="10dp"
+            android:elevation="5dp" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_content"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:minHeight="100dp"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/layout_id"
+                layout="@layout/item_details_todo" />
+
+            <include
+                android:id="@+id/layout_user_id"
+                layout="@layout/item_details_todo" />
+
+            <include
+                android:id="@+id/layout_title"
+                layout="@layout/item_details_todo" />
+
+            <include
+                android:id="@+id/layout_status"
+                layout="@layout/item_details_todo" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

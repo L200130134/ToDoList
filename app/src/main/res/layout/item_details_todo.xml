@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:fontFamily="@font/productsans_medium"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        tools:text="Title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_value"
+        android:layout_below="@id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/productsans_regular"
+        tools:text="Value" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:visibility="gone"
+        android:id="@+id/icon_completed"
+        android:layout_toEndOf="@id/text_value"
+        android:layout_below="@id/text_title"
+        android:layout_alignTop="@id/text_value"
+        android:layout_alignBottom="@id/text_value"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/ic_completed" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/text_value"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="@color/divider" />
+
+</RelativeLayout>
